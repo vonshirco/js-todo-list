@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CRUD</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!--https://www.geeksforgeeks.org/how-to-add-bootstrap-in-a-project/-->
+    <!--Adding Bootstrap for
+        online only:
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    for offline: is below-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+</head>
+<body>
+
+    <div class="title">
+        <h1>To Do List</h1>
+
+        <p>Remainder for things to do.</p>
+    </div>
+
+    <div class="form">
+        <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+            <!--action="javascript:void(0);" prevents page reloads and maintain HTML standard.-->
+            <input type="text" id="add-todo" placeholder="Things To-Do">
+            <input type="submit" value="Add" class="btn btn-primary">
+
+        </form>
+
+        <p>You Have:</p>
+        <p id="counter"></p>
+
+        <table>
+            <tr class="to-do">
+                <th><h3>To Do:</h3></th>
+            </tr>
+            <tbody id="tasks">
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="edit-box" role="arial-hidded"> <!--Disappear and -->
+        <form action="javascript:void(0);" method="POST" id="save-edit">
+            <input type="text" id="edit-todo">
+            <input type="submit" value="Save" class="btn btn-success"/>
+            <!--in order to Cancel the edit box-->
+            <!--<a onclick="CloseInput()" aria-label="Close">&#10006;</a>-->
+            <input type="button" value="Cancel" class="btn btn-secondary" onclick="CloseInput()" arial-label="Close">
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <!--Bootstrap for JavaScript
+        for online only:
+    <script src=”https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js” integrity=”sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ” crossorigin=”anonymous”></script>
+        for offline:
+    <script type="text/javascript" href="js/jquery.js"></script>
+    <script type="text/javascript" href="js/bootstrap.min.js"></script>
+    -->
+</body>
+</html>
